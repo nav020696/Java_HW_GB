@@ -1,4 +1,4 @@
-package Course2.Seminar1;
+package clients;
 
 public class Illness {
     String title;
@@ -9,8 +9,6 @@ public class Illness {
 
     @Override
     public String toString() {
-        return "Illness{" +
-                "title='" + title + '\'' +
-                '}';
+        return String.format("clients.Illness: %s", title);
     }
 }

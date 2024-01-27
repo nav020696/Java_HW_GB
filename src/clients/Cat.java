@@ -1,8 +1,10 @@
-package Course2.Seminar1;
+package clients;
+
+import clients.Animal;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
 
     protected Double discount;
     public Cat(String name, Owner owner, LocalDate birthDate, Illness illness, Double discount) {
@@ -18,5 +20,15 @@ public class Cat extends Animal{
     @Override
     public String toString() {
         return super.toString() + " discount " + discount;
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("Я не умаю летать, мур");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Я не умею плавать, мур");
     }
 }

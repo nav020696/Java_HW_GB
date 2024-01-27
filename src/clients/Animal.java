@@ -1,4 +1,4 @@
-package Course2.Seminar1;
+package clients;
 
 import java.time.LocalDate;
 
@@ -58,6 +58,18 @@ public class Animal {
         System.out.println("Животное спит");
     }
 
+    public void toGo(){
+        System.out.println("Животное двигается");
+    }
+
+    public void fly(){
+        System.out.println("Животное полетело");
+    }
+
+    public void swim(){
+        System.out.println("Животное плавает");
+    }
+
     public void lifeCircle(){
         wakeUp("12:00");
         hunt();
@@ -71,6 +83,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return String.format("Name = %s, bd = %s, Owner = %s, Illness = %s", name, birthDate, owner, illness);
+        return String.format("Name = %s, bd = %s, clients.Owner = %s, clients.Illness = %s", name, birthDate, owner, illness);
     }
 }

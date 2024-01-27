@@ -1,4 +1,4 @@
-package Course2.Seminar1;
+package clients;
 
 public class Owner {
     String fullName;
@@ -9,8 +9,6 @@ public class Owner {
 
     @Override
     public String toString() {
-        return "Owner{" +
-                "fullName='" + fullName + '\'' +
-                '}';
+        return String.format("clients.Owner: %s", fullName);
     }
 }
