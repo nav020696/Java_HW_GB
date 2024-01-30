@@ -1,10 +1,11 @@
-package clients;
+package animals;
 
-import clients.Animal;
+import clinic.Illness;
+import clinic.Owner;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Goable{
 
     protected Double discount;
     public Cat(String name, Owner owner, LocalDate birthDate, Illness illness, Double discount) {
@@ -23,12 +24,8 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void fly() {
-        System.out.println("Я не умаю летать, мур");
-    }
-
-    @Override
-    public void swim() {
-        System.out.println("Я не умею плавать, мур");
+    public double run() {
+        System.out.println("Кошка бежит");
+        return 14;
     }
 }
