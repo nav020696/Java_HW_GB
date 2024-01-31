@@ -15,6 +15,6 @@ public class Nurse extends Personal {
     }
 
     public void providesAssistance(Animal animal){
-        System.out.printf("Медсестра оказывает помощь %s с помощью %s", animal.getName(), animal.getIllness().getMedication());
+        System.out.printf("Медсестра оказывает помощь %s с помощью %s\n", animal.getName(), animal.getIllness().getMedication());
     }
 }

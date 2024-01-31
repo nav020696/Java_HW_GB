@@ -18,25 +18,20 @@ public class VeterinaryClinic {
     }
 
     public void StartShift(Doctor doctor, Nurse nurse){
-        Iterator<Animal> iterator = allPatient.iterator();
-        System.out.println("_______________ Бегающие животные _______________");
-        printPatients(getGoableAnimals());
-        System.out.println("_______________ Плавающие животные ______________");
-        printPatients(getSwimableAnimals());
-        System.out.println("_______________ Летающие животные _______________");
-        printPatients(getSFlyableAnimals());
-        System.out.println();
         System.out.printf("Доктор %s и медсестра %s начинают смену\n", doctor.getFullName(), nurse.getFullName());
-//        while(iterator.hasNext()){
-//            nurse.invitePatient(iterator.next().getOwner());
-//            doctor.askQuestions(iterator.next().getOwner());
-//            nurse.bringTools();
-//            doctor.inspect(iterator.next());
-//            nurse.providesAssistance(iterator.next());
-//            doctor.writesPrescription();
-//            System.out.printf("%s отпущен домой", iterator.next().getName());
-//            iterator.remove();
-//        }
+        Iterator<Animal> iterator = allPatient.iterator();
+        while(iterator.hasNext()){
+            Animal animal = iterator.next();
+            nurse.invitePatient(animal.getOwner());
+            doctor.askQuestions(animal.getOwner());
+            nurse.bringTools();
+            doctor.inspect(animal);
+            nurse.providesAssistance(animal);
+            doctor.writesPrescription();
+            System.out.printf("%s отпущен домой\n", animal.getName());
+            System.out.println();
+            iterator.remove();
+        }
     }
 
     public List<Animal> getGoableAnimals(){
